@@ -11,9 +11,14 @@ const NewsBoard = ({category}) => {
   return (
     <div>
       <h2 className="text-center">Latest <span className="badge bg-danger">News</span></h2>
-      {articles.filter(article => !article.title.includes("[Removed]") && !(article.description && article.description.includes("[Removed]"))).map((news,index)=>{
-        return <NewsItem key={index} title={news.title} description={news.description} src={news.urlToImage} url={news.url}/>
-      })}
+      {articles.filter(article => 
+  article && 
+  article.title && 
+  !article.title.includes("[Removed]") && 
+  (!article.description || !article.description.includes("[Removed]"))
+).map((news,index)=>{
+  return <NewsItem key={index} title={news.title} description={news.description} src={news.urlToImage} url={news.url}/>
+})}
     </div>
   )
 }
