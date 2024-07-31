@@ -1,8 +1,14 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Overview**
+NewsApp API is a RESTful service that provides up-to-date news articles from various categories including business, health, technologies, science, sports, and entertainment. This API aggregates news from multiple sources to deliver comprehensive and diverse news coverage.
 
-Currently, two official plugins are available:
+**Features**
+*Fetch latest news articles by category.
+*Search news articles by keywords.
+*Sorted news articles based on relevance or published date.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Getting Started**
+*Prerequisites
+*Node.js and npm installed on your machine.
+*An API key from a news provider [(NewsAPI.org)].
