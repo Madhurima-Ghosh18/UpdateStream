@@ -14,10 +14,10 @@ NewsApp API is a RESTful service that provides up-to-date news articles from var
 * Node.js and npm installed on your machine.
 * An API key from a news provider (NewsAPI.org).
 
-# install dependencies
+### install dependencies
 
 npm install
 
-# start the dev server
+### start the dev server
 
 npm run dev
