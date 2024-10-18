@@ -1,3 +1,11 @@
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .navbar-nav .nav-link {
   font-size: 1.2rem; /* Increase font size */
   padding: 0.5rem 1rem; /* Adjust padding for better spacing */
