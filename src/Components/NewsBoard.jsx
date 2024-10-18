@@ -39,29 +39,31 @@ const NewsBoard = ({ category }) => {
   }, [category, apiKey]);
 
   return (
-    <div>
-      <h2 className="text-center">Latest <span className="badge bg-danger">News</span></h2>
+    <div className="container">
+      <h2 className="text-center mb-4">Latest <span className="badge bg-danger">News</span></h2>
       {error && <p className="text-danger">{error}</p>}
-      {articles.length > 0 ? (
-        articles
-          .filter(article =>
-            article &&
-            article.title &&
-            !article.title.includes("[Removed]") &&
-            (!article.description || !article.description.includes("[Removed]"))
-          )
-          .map((news) => (
-            <NewsItem
-              key={news.url}
-              title={news.title}
-              description={news.description}
-              src={news.urlToImage || defaultImage}
-              url={news.url}
-            />
-          ))
-      ) : (
-        <p>No articles available</p>
-      )}
+      <div className="row">
+        {articles.length > 0 ? (
+          articles
+            .filter(article =>
+              article &&
+              article.title &&
+              !article.title.includes("[Removed]") &&
+              (!article.description || !article.description.includes("[Removed]"))
+            )
+            .map((news) => (
+              <NewsItem
+                key={news.url}
+                title={news.title}
+                description={news.description}
+                src={news.urlToImage || defaultImage}
+                url={news.url}
+              />
+            ))
+        ) : (
+          <p>No articles available</p>
+        )}
+      </div>
     </div>
   );
 };
